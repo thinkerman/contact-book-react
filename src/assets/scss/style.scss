@@ -9,6 +9,11 @@
     }
 }
 body {
+    #root {
+        position: relative;
+        bottom: 50%;
+        transform: translateY(15%);
+    }
     width: 100%;
     ul {
         li {
@@ -26,6 +31,8 @@ body {
     }
     a {
         text-decoration: none;
+        color: #000;
+        // font-weight: bold;
         &#back-button {
             color: #fff;
             background-color: cornflowerblue;
@@ -51,6 +58,10 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 10;
+    #passcode-answer {
+        text-align: center;
+        margin-top: 45px;
+    }
     &.phone-homescreen {
         background-image: url("../imgs/iphone.png"), url("../imgs/background.png");
         border-top-left-radius: 30px;
@@ -357,6 +368,7 @@ main {
                         #delete-contact {
                             font-size: 19px;
                             font-weight: bold;
+
                             &:hover {
                                 cursor: pointer;
                             }

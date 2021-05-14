@@ -15,7 +15,9 @@ function App() {
   return (
     <Router>
       <main className={document.location.pathname === '/home' ? 'phone-homescreen' : ''}>
+
         <div className="phone-container">
+
           <TopBar />
           <Switch>
             <Route path="/" component={NumberPad} exact />
@@ -27,7 +29,7 @@ function App() {
 
 
         </div>
-
+        <h1 id="passcode-answer">passcode : 1111</h1>
       </main>
     </Router>
 

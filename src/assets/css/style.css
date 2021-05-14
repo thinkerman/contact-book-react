@@ -15,6 +15,12 @@ body {
   /* this will hide the scrollbar in internet explorers */
   -ms-overflow-style: none;
 }
+body #root {
+  position: relative;
+  bottom: 50%;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
 body ul li {
   list-style-type: none;
   display: inline;
@@ -25,6 +31,7 @@ body *::-webkit-scrollbar {
 }
 body a {
   text-decoration: none;
+  color: #000;
 }
 body a#back-button {
   color: #fff;
@@ -50,6 +57,10 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
+}
+main #passcode-answer {
+  text-align: center;
+  margin-top: 45px;
 }
 main.phone-homescreen {
   background-image: url("../imgs/iphone.png"), url("../imgs/background.png");

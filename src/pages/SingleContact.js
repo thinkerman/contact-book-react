@@ -33,7 +33,8 @@ export default class SingleContact extends React.Component {
 
     }
 
-    navigateBackToContacts() {
+    navigateBackToContacts(e) {
+        e.preventDefault();
         window.history.back();
     }
 
@@ -85,11 +86,11 @@ export default class SingleContact extends React.Component {
                 <div className="icons-container">
                     <div className="left" onClick={this.navigateBackToContacts}>
                         <div></div>
-                        <div>Contact</div>
+                        <div><a href="/">Contact</a></div>
                     </div>
                     <div className="right">
                         <div></div>
-                        <div id="delete-contact" onClick={this.deleteContact}>--</div>
+                        <input type="button" id="delete-contact" onClick={this.deleteContact} value="delete" />
 
                     </div>
                 </div>
@@ -107,11 +108,6 @@ export default class SingleContact extends React.Component {
                                 <p>Country : <label>{this.state.contactData.country.trim()}</label></p>
                                 <hr></hr>
                                 <p>Group : <label>{this.state.contactData.contact_group.trim()}</label></p>
-
-
-
-
-
                             </div>
                         ) : <p>User not found!</p>
                     }

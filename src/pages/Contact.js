@@ -8,7 +8,8 @@ export default class ContactBook extends React.Component {
         loading: true
     }
 
-    navigateBackToContacts() {
+    navigateBackToContacts(e) {
+        e.preventDefault()
         window.history.back();
     }
     componentDidMount() {
@@ -24,14 +25,16 @@ export default class ContactBook extends React.Component {
         return (
             <div className="shoutouts-container">
                 <div className="icons-container">
-                    <div className="left" onClick={this.navigateBackToContacts}>
+                    <a href="/" className="left" onClick={this.navigateBackToContacts}>
                         <div></div>
-                        <div>Home</div>
-                    </div>
+
+                        <div data-testid="home-button-test-id">Home</div>
+                    </a>
                     <div className="right">
                         <div></div>
                         <Link to='/add'>
-                            <div id="add-contact">+</div>
+
+                            <input type="button" id="add-contact" value="Add" />
                         </Link>
                     </div>
                 </div>
@@ -39,7 +42,6 @@ export default class ContactBook extends React.Component {
                 <div className="shoutouts-inner">
 
                     <h3>Contacts</h3>
-                    <input type="text" name="" id="" placeholder="Search" />
 
                     {this.state.contacts.map((contact) => (
                         <div className="single-message" key={contact.id}>
@@ -47,7 +49,8 @@ export default class ContactBook extends React.Component {
                                 <div className="message-details">
                                     <div className="sender-details">
                                         <Link to={'/contact/?id=' + contact.id}>
-                                            <div>{contact.fname + "  " + contact.lname}</div>
+                                            <div><b>Name:</b>  {contact.fname + "  " + contact.lname}</div>
+                                            <div><b>Email:</b> {contact.email}</div>
                                         </Link>
                                     </div>
                                 </div>
