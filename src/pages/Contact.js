@@ -12,13 +12,14 @@ export default class ContactBook extends React.Component {
         e.preventDefault()
         window.history.back();
     }
+
     componentDidMount() {
 
-        fetch('http://localhost:8080/all')
+        fetch('https://api.ioschap.com/all')
             .then((response) => response.json())
             .then(data => {
                 this.setState({ contacts: data })
-            });
+            }).catch(error => console.log(error));
     }
 
     render() {

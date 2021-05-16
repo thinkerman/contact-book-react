@@ -167,7 +167,7 @@ main .phone-container .top-bar .right ul li#wifi {
   background-position: center;
 }
 main .phone-container .top-bar .right ul li#battery {
-  background-image: url("../imgs/battery.png");
+  background-image: url("../imgs/low-battery.svg");
   background-size: cover;
   background-position: center;
   width: 16px;
@@ -415,8 +415,10 @@ main .phone-container .shoutouts-container .shoutouts-inner input[type=text] {
   width: 90%;
 }
 main .phone-container .shoutouts-container .shoutouts-inner p {
-  font-weight: bold;
   font-size: 13px;
+}
+main .phone-container .shoutouts-container .shoutouts-inner p label {
+  font-weight: bold;
 }
 main .phone-container .shoutouts-container .shoutouts-inner label {
   display: block;
@@ -621,21 +623,26 @@ main .phone-container .shoutouts-container .shoutouts-inner .search-input img {
 }
 .bottom-bar .bottom-inner .footer-icon#gmail {
   background-image: url("../imgs/gmail.png");
+  opacity: 0.3;
 }
 .bottom-bar .bottom-inner .footer-icon#messages {
   background-image: url("../imgs/messages.png");
   width: 43px;
+  opacity: 0.3;
 }
 .bottom-bar .bottom-inner .footer-icon#safari {
-  background-image: url("../imgs/safari.png");
-  width: 40px;
+  background-image: url("../imgs/safari.svg");
+  width: 35px;
+  opacity: 0.3;
 }
 .bottom-bar .bottom-inner .footer-icon#twitter {
   background-image: url("../imgs/twitter.png");
   width: 43px;
+  opacity: 0.3;
 }
 .bottom-bar .bottom-inner .footer-icon#contacts {
-  background-image: url("../imgs/contacts.png");
+  width: 35px;
+  background-image: url("../imgs/contacts.svg");
 }
 .bottom-bar .left {
   display: -webkit-inline-flex;
@@ -666,6 +673,42 @@ main .phone-container .shoutouts-container .shoutouts-inner .search-input img {
   height: 18px;
   padding-right: 5px;
   padding-top: 3px;
+}
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

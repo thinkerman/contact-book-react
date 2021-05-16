@@ -46,6 +46,7 @@ export default class NumberPad extends React.Component {
                 break;
             default:
                 let defaultCase = null;
+                return defaultCase;
 
         }
         console.log(this.state.passcode)

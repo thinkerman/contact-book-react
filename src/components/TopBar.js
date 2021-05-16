@@ -1,6 +1,4 @@
 import React from 'react';
-import wifiImage from '../assets/imgs/wifi.png';
-import batteryImage from '../assets/imgs/battery.png';
 export default class TobBar extends React.Component {
 
     currentTime() {
@@ -21,8 +19,9 @@ export default class TobBar extends React.Component {
                 </div>
                 <div className="right">
                     <ul className="top-bar-icons">
-                        <li style={{ backgroundImage: "url('" + wifiImage + "')", backgroundSize: "cover", backgroundPosition: "center" }}></li>
-                        <li style={{ backgroundImage: "url('" + batteryImage + "')", backgroundSize: "cover", backgroundPosition: "center" }}></li>
+                        <li id="network"></li>
+                        <li id="wifi"></li>
+                        <li id="battery"></li>
                     </ul>
                 </div>
             </div>

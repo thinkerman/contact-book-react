@@ -28,21 +28,32 @@
             }
             &#gmail {
                 background-image: url("../imgs/gmail.png");
+                opacity: 0.3;
             }
             &#messages {
                 background-image: url("../imgs/messages.png");
                 width: 43px;
+                opacity: 0.3;
             }
             &#safari {
-                background-image: url("../imgs/safari.png");
-                width: 40px;
+                background-image: url("../imgs/safari.svg");
+                width: 35px;
+                opacity: 0.3;
             }
             &#twitter {
                 background-image: url("../imgs/twitter.png");
                 width: 43px;
+                opacity: 0.3;
             }
             &#contacts {
-                background-image: url("../imgs/contacts.png");
+                width: 35px;
+                background-image: url("../imgs/contacts.svg");
+                // animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+                // transform: translate3d(0, 0, 0);
+                // backface-visibility: hidden;
+                // perspective: 1000px;
+                // animation-iteration-count: infinite;
+                // animation-delay: 2s;
                 // width: 43px;
             }
         }
@@ -85,5 +96,27 @@
         }
         .img {
         }
+    }
+}
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
     }
 }

@@ -39,7 +39,7 @@ export default class SingleContact extends React.Component {
     }
 
     updateContactDetails() {
-        axios.post('http://localhost:8080/update', {}, {
+        axios.post('https://api.ioschap.com/update', {}, {
             params: {
                 id: document.location.search.split('=')[1],
                 field: '',
@@ -55,7 +55,7 @@ export default class SingleContact extends React.Component {
 
     deleteContact() {
 
-        axios.post('http://localhost:8080/remove', {}, {
+        axios.post('https://api.ioschap.com/remove', {}, {
             params: {
                 id: document.location.search.split('=')[1]
             }
@@ -68,7 +68,7 @@ export default class SingleContact extends React.Component {
     }
     componentDidMount() {
 
-        axios.get(`http://localhost:8080/contact`, { params: { id: document.location.search.split('=')[1] } })
+        axios.get(`https://api.ioschap.com/contact`, { params: { id: document.location.search.split('=')[1] } })
             .then(response => {
 
                 this.setState({ contactData: response.data[0] })
@@ -98,16 +98,16 @@ export default class SingleContact extends React.Component {
                     {
                         this.state.contactData ? (
                             <div>
-                                <p>First name :<label> {this.state.contactData.fname.trim()} </label></p>
-                                <p>Last name : <label>{this.state.contactData.lname.trim()}</label></p>
-                                <p>Email: <label>{this.state.contactData.email.trim()}</label></p>
+                                <p><label>First name : </label> {this.state.contactData.fname}</p>
+                                <p><label>Last name :  </label>{this.state.contactData.lname}</p>
+                                <p><label>Email:  </label>{this.state.contactData.email}</p>
                                 <hr></hr>
-                                <p>Street : <label>{this.state.contactData.street_address.trim()}</label></p>
-                                <p>Post Code : <label>{this.state.contactData.p_code.trim()}</label></p>
-                                <p>Province : <label>{this.state.contactData.province.trim()}</label></p>
-                                <p>Country : <label>{this.state.contactData.country.trim()}</label></p>
+                                <p><label>Street :  </label>{this.state.contactData.street_address}</p>
+                                <p><label>Post Code :  </label>{this.state.contactData.p_code}</p>
+                                <p><label>Province :  </label>{this.state.contactData.province}</p>
+                                <p><label>Country :  </label>{this.state.contactData.country}</p>
                                 <hr></hr>
-                                <p>Group : <label>{this.state.contactData.contact_group.trim()}</label></p>
+                                <p><label>Group :</label> {this.state.contactData.contact_group}</p>
                             </div>
                         ) : <p>User not found!</p>
                     }

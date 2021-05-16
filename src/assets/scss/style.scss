@@ -159,7 +159,7 @@ main {
                             background-position: center;
                         }
                         &#battery {
-                            background-image: url("../imgs/battery.png");
+                            background-image: url("../imgs/low-battery.svg");
                             background-size: cover;
                             background-position: center;
                             width: 16px;
@@ -368,7 +368,6 @@ main {
                         #delete-contact {
                             font-size: 19px;
                             font-weight: bold;
-
                             &:hover {
                                 cursor: pointer;
                             }
@@ -392,8 +391,10 @@ main {
                     width: 90%;
                 }
                 p {
-                    font-weight: bold;
                     font-size: 13px;
+                    label {
+                        font-weight: bold;
+                    }
                 }
                 label {
                     display: block;
